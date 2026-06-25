@@ -1,0 +1,24 @@
+{
+  "name": "Babylon Staking",
+  "short_name": "Babylon",
+  "description": "Babylon Staking lets you stake native BTC via Babylon from your own wallet with no yield promises.",
+  "start_url": "https://babylon-staking.github.io/",
+  "scope": "https://babylon-staking.github.io/",
+  "display": "standalone",
+  "background_color": "#090A0F",
+  "theme_color": "#090A0F",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

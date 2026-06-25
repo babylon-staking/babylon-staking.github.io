@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://babylon-staking.github.io/sitemap.xml
