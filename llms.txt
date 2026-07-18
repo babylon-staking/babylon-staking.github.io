@@ -1,0 +1,68 @@
+# Babylon Staking
+> An independent guide to Babylon’s non-custodial protocol for staking native BTC and BABY to help secure Babylon Genesis and connected networks.
+
+## What is Babylon Staking
+Babylon Staking primarily means locking native BTC on Bitcoin and delegating its voting power to a Finality Provider through the Babylon protocol. The BTC remains on Bitcoin rather than being bridged, wrapped, or deposited with a custodian. This gives proof-of-stake networks external, slashable economic security and helps new networks bootstrap security. Babylon Genesis separately supports conventional BABY delegation to validators and co-staking with BTC.
+
+## How it works
+1. Connect compatible Bitcoin and Babylon Genesis wallets, choose a Finality Provider, and specify the BTC stake.
+2. The Bitcoin wallet signs and broadcasts a transaction locking BTC in a Taproot output with timelock, unbonding, and slashing spending paths.
+3. Babylon Genesis verifies the Bitcoin transaction; covenant participants provide required signatures, and the delegation activates after the required Bitcoin confirmations.
+4. The Finality Provider contributes finality votes while Babylon Genesis tracks the delegation and accounts for BABY rewards.
+5. To exit early, request full unbonding, wait through the protocol’s Bitcoin-block timelock, and sign the withdrawal with the staker key.
+
+## Key facts
+- Native BTC staking operates on Bitcoin mainnet; BTC is not wrapped or bridged.
+- Babylon Genesis mainnet is a Cosmos SDK chain with chain ID `bbn-1`.
+- BABY is the Genesis gas, staking, and governance token; its base denomination is `ubbn`.
+- BTC uses Taproot/Tapscript UTXOs rather than an EVM smart-contract deposit.
+- BTC stakers retain their withdrawal key but cannot freely spend locked BTC before exit conditions are met.
+- Finality Providers receive delegated BTC voting power; Babylon Genesis validators receive BABY delegations.
+- BTC activation currently requires 30 Bitcoin confirmations when the selected Finality Provider is active.
+- BTC stakes can be partially slashed if their delegated Finality Provider double-signs; partial unbonding is unsupported.
+- Native BTC staking and third-party liquid-staking tokens have different custody and protocol risks.
+
+## Common questions
+
+**Is Babylon staking safe?**  
+It removes bridge and custodial-deposit risk, but not all risk. Slashing, software defects, compromised keys, phishing, incorrect transactions, Finality Provider behavior, covenant availability, and reward-token volatility remain relevant; published audits do not eliminate them.
+
+**Who controls my BTC?**  
+The BTC is locked in a Bitcoin Taproot output. The staker retains the key required for withdrawal, while protocol scripts and covenant signatures enforce unbonding and slashing rules.
+
+**What fees apply?**  
+Users pay Bitcoin network fees for staking and withdrawal-related transactions, Babylon Genesis gas for relevant BABY operations, and any commission charged by the selected Finality Provider or validator.
+
+**How long does staking take?**  
+BTC activation requires 30 Bitcoin confirmations plus protocol processing. Early unbonding has a protocol-defined Bitcoin-block delay; BABY staking is queued and processed at epoch boundaries.
+
+**Which assets and chains are supported?**  
+The native paths cover BTC on Bitcoin mainnet and BABY on Babylon Genesis. External liquid-staking products and supported Bitcoin Supercharged Networks are separate integrations whose availability can change.
+
+**How do I start?**  
+Use the official staking interface, connect supported wallets, verify the network and transaction details, choose a Finality Provider or validator, and approve the transaction in your wallet.
+
+## App
+- Dashboard: https://babylon-staking.github.io/
+- App: https://babylon-staking.github.io/dashboard/
+
+## Official resources
+Babylon Labs: https://babylonlabs.io/
+Official staking dashboard: https://staking.babylonlabs.io/
+Native BTC staking interface: https://btcstaking.babylonlabs.io/
+Documentation: https://docs.babylonlabs.io/
+Staking guides: https://docs.babylonlabs.io/stakers/
+Bitcoin staking overview: https://docs.babylonlabs.io/guides/overview/bitcoin_staking/
+Official FAQ: https://docs.babylonlabs.io/guides/support/faqs/
+Audit reports: https://docs.babylonlabs.io/guides/security/audit_reports/
+Source code: https://github.com/babylonlabs-io
+Bitcoin staking litepaper: https://docs.babylonlabs.io/papers/btc_staking_litepaper.pdf
+Official X: https://x.com/babylonlabs_io
+
+## Data & references
+Babylon Genesis explorer: https://www.mintscan.io/babylon
+Bitcoin explorer: https://mempool.space/
+CoinGecko BABY market data: https://www.coingecko.com/en/coins/babylon
+DeFiLlama Babylon Protocol data: https://defillama.com/protocol/babylon-protocol
+Babylon research paper: https://arxiv.org/abs/2201.07946
+BIP-341 Taproot specification: https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki
