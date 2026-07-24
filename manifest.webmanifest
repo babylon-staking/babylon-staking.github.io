@@ -1,0 +1,19 @@
+{
+  "name": "Babylon Staking",
+  "short_name": "Babylon Staking",
+  "description": "A practitioner's guide to Babylon Staking: how native BTC and BABY staking work, the routes, rewards, lock-ups, slashing, and how to unstake safely.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "background_color": "#f5f6f8",
+  "theme_color": "#f5f6f8",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
